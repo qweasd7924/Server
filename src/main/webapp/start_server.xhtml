@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Server start</title>
+</h:head>
+
+<h:body>
+        <div>
+            <h1><span class="label label-default">Start server</span></h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <h:form id="startServer">
+                            <h:outputLabel class="" value="count:"/>
+                            <h:inputText id="count" style="width:200px" styleClass="form-control" value="#{serverB.count}"/><br/>
+
+                            <h:outputLabel class="" value="port"/>
+                            <h:inputText id="port" style="width:200px" styleClass="form-control" value="#{serverB.port}"/><br/>
+
+                            <h:outputLabel class="" value="message"/>
+                            <h:inputText id="message" style="width:200px" styleClass="form-control" value="#{serverB.message}"/><br/>
+
+                            <h:commandButton action = "#{serverEJB.startServer(serverB)}" class="btn btn-primary" style="width:150px" value="Start" type="submit"/><br/><br/>
+                            <h:commandButton action = "#{serverEJB.changeMessage(serverB)}" class="btn btn-primary" style="width:150px" value="Change message" type="submit"/><br/><br/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</h:body>
+</html>
