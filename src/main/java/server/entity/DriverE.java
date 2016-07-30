@@ -1,5 +1,7 @@
 package server.entity;
 
+import server.bean.DriverB;
+
 import javax.persistence.*;
 
 /**
@@ -14,6 +16,14 @@ public class DriverE {
     private int id;
     @Column
     private String fullName;
+
+    public DriverE() {
+    }
+
+    public DriverE(server.bean.DriverB driverB) {
+        this.fullName = driverB.getFullName();
+        this.id = driverB.getId();
+    }
 
     public String getFullName() {
         return fullName;

@@ -17,4 +17,6 @@ public interface Queries {
     public List<ClientE> getAllClients();
 
     public List<OrderE> getAllOrdersByLogin(String login);
+
+    public void addDriver(server.bean.DriverB driverB);
 }

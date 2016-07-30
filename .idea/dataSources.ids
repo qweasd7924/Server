@@ -11,37 +11,49 @@
       <table id="2" parent="1" name="hibernate_sequence"/>
       <table id="3" parent="1" name="serverdb"/>
       <table id="4" parent="1" name="person"/>
-      <column id="5" parent="2" name="next_val">
+      <table id="5" parent="1" name="driver"/>
+      <column id="6" parent="2" name="next_val">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="6" parent="3" name="user_id">
+      <column id="7" parent="3" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="7" parent="3" name="count">
+      <column id="8" parent="3" name="count">
         <data-type>int(11)</data-type>
       </column>
-      <column id="8" parent="3" name="message">
+      <column id="9" parent="3" name="message">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="9" parent="3" name="port">
+      <column id="10" parent="3" name="port">
         <data-type>int(11)</data-type>
       </column>
-      <key id="10" parent="3" name="PRIMARY">
+      <key id="11" parent="3" name="PRIMARY">
         <columns>user_id</columns>
         <primary>1</primary>
       </key>
-      <column id="11" parent="4" name="id">
+      <column id="12" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="12" parent="4" name="name">
+      <column id="13" parent="4" name="name">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="13" parent="4" name="surname">
+      <column id="14" parent="4" name="surname">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="14" parent="4" name="PRIMARY">
+      <key id="15" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="5" name="fullName">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="18" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>

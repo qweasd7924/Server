@@ -14,7 +14,7 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 /**
- * Created by Павел on 30.07.2016.
+ * Created by пїЅпїЅпїЅпїЅпїЅ on 30.07.2016.
  */
 public class PersonTest extends DBUnitConfig{
 
@@ -52,8 +52,8 @@ public class PersonTest extends DBUnitConfig{
     @Test
     public void testSave() throws Exception {
         Person person = new Person();
-        person.setName("Lilia");
-        person.setSurname("Vernugora");
+        person.setName("Pasha");
+        person.setSurname("Plug");
 
         service.save(person);
 
