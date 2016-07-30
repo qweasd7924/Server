@@ -10,7 +10,11 @@ import javax.persistence.PersistenceUnit;
  */
 @Stateless
 public class Service {
-    @PersistenceUnit(unitName="NCEDU")
+//    @PersistenceUnit(unitName="NCEDU")
     public static EntityManager em = Persistence.createEntityManagerFactory("NCEDU").createEntityManager();
-
+//    private EntityManager em = Persistence.createEntityManagerFactory("NCEDU").createEntityManager();
+//
+//    public EntityManager getEm() {
+//        return em;
+//    }
 }
