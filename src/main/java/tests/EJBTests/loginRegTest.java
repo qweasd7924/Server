@@ -12,6 +12,7 @@ import server.entity.DriverE;
 import server.service.TotalService;
 import tests.DBUnitConfig;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -53,10 +54,10 @@ public class loginRegTest extends DBUnitConfig {
     }
 
     @Test
-    public void testSave() throws Exception {
+    public void testAdd() throws Exception {
         DriverB driver = new DriverB();
-        driver.setFullName("Pasha Plug");
-        driver.setId(1);
+        driver.setFullName("pers 5");
+        driver.setId(5);
 
         service.addDriver(driver);
 
