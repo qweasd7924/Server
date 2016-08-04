@@ -1,21 +1,38 @@
 package server.ejb;
 
+import server.bean.ClientB;
+import server.bean.DriverB;
 import server.entity.ClientE;
 import server.entity.DriverE;
+import server.entity.Enum.StateOfLogin;
+import server.entity.LoginE;
+import server.service.TotalService;
+
+import javax.inject.Inject;
 
 /**
- * Created by Павел on 30.07.2016.
+ * Created by пїЅпїЅпїЅпїЅпїЅ on 30.07.2016.
  */
 public class LoginRegImpl implements LoginReg {
-    @Override
-    public ClientE addNewClient(String login, String Password, String repassword, String email) {
-        return null;
-    }
+    TotalService totalService = new TotalService();
 
     @Override
-    public DriverE addNewDriver(String login, String Password, String repassword, String email) {
-        return null;
+    public void addNewObj(StateOfLogin clOrDriver, String login, String password, String repassword) {
+        Object o = totalService.getByLogin(login);
+        // TODO: 02.08.2016 same login check
+        if (o == null) {
+            if (repassword.equals(password)) {
+                LoginE loginE = new LoginE();
+                loginE.setLogin(login);
+                loginE.setPassword(password);
+                loginE.setState(clOrDriver);
+                totalService.addLogin(loginE, clOrDriver);
+            }
+        }else {
+            // TODO: 03.08.2016 throw same user exists
+        }
     }
+
 
     @Override
     public boolean login(String login, String password) {

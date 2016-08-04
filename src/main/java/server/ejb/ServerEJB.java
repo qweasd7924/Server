@@ -18,7 +18,6 @@ public class ServerEJB {
     @Inject
     ServerManager serverManager;
 
-//    @BeforeCompletion
     public String startServer(ServerB serverB) {
 //        serverB.setPort(6666);
 //        serverB.setMessage("Avtostart");
@@ -37,8 +36,6 @@ public class ServerEJB {
     public void changeMessage(ServerB serverB){
         serverManager.changeMessage(serverB);
     }
-
-    public int retOne(){return 1;}
 
     public void communicate(ServerSocket ss,ServerB serverB) {
         while (true) {
@@ -83,18 +80,4 @@ public class ServerEJB {
         return query + " 8====Ý";
     }
 
-//    public String register(String LoginReg, String password, String age) {
-//        CarService.addClient(new entity.ClientE(LoginReg, password, Integer.parseInt(age)));
-//        return "true";
-//    }
-//
-//    public String LoginReg(String LoginReg, String password) {
-//        entity.ClientE client = CarService.getClientByLogin(LoginReg);
-//        if ((client != null) && (client.getPassword().equals(password))) {
-//            return "true";
-//        }
-//        else {
-//            return "false";
-//        }
-//    }
 }

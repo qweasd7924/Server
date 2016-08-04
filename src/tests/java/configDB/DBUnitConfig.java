@@ -1,4 +1,4 @@
-package tests;
+package configDB;//package ;
 
 import org.dbunit.DBTestCase;
 import org.dbunit.IDatabaseTester;
@@ -32,7 +32,7 @@ public class DBUnitConfig extends DBTestCase {
         prop = new Properties();
         try {
             prop.load(Thread.currentThread()
-                    .getContextClassLoader().getResourceAsStream("config for tests/configdb.properties"));
+                    .getContextClassLoader().getResourceAsStream("configdb.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,6 +50,7 @@ public class DBUnitConfig extends DBTestCase {
 
     @Override
     protected DatabaseOperation getTearDownOperation() throws Exception {
-        return DatabaseOperation.DELETE_ALL;
+        return DatabaseOperation.NONE;
+//        return DatabaseOperation.DELETE_ALL;
     }
 }

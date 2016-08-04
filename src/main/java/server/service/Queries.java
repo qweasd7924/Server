@@ -2,6 +2,7 @@ package server.service;
 
 import server.entity.ClientE;
 import server.entity.DriverE;
+import server.entity.Enum.StateOfLogin;
 import server.entity.OrderE;
 
 import java.util.List;
@@ -12,11 +13,14 @@ import java.util.List;
 public interface Queries {
     public Object getByLogin(String login);
 
-    public List<DriverE> getAllDrivers();
 
-    public List<ClientE> getAllClients();
+    List<DriverE> getAllDrivers();
+
+    List<ClientE> getAllClients();
 
     public List<OrderE> getAllOrdersByLogin(String login);
 
-    public void addDriver(server.bean.DriverB driverB);
+    public DriverE addDriver(DriverE driver);
+
+    void addDriverInfo(server.bean.DriverB driverB);
 }

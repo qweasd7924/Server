@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <client id="12" fullName="client 12" phone="111" adress ="not here"/>
+    <client id="10" fullName="client 10" phone="111" adress ="here"/>
+    <client id="11" fullName="client 11" phone="111" adress ="here"/>
+
+    <driver id="7" fullName="driver 7" phone="111" balance="100" experience="10" location="not here" status="1"/>
+    <driver id="5" fullName="driver 5" phone = "111" balance ="0" experience = "0"  location="here"  status ="0"/>
+    <driver id="6" fullName="driver 6" phone = "111" balance ="0" experience = "0"  location="here"  status ="0"/>
+
+</dataset>
