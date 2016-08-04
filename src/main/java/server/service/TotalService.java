@@ -23,21 +23,28 @@ public class TotalService implements Queries {
     public Object getByLogin(String login) {
         TypedQuery<LoginE> query = em.createNamedQuery("Login.GetByLogin", LoginE.class);
         query.setParameter("login", login);
-        query.getResultList();
         if (query.getResultList().isEmpty()) {
             return null;
         }
-        // TODO: 04.08.2016 get by login uncomment 
-//
-//        if (query.getSingleResult().getDriverE().equals(null)){
-//            TypedQuery<ClientE> query1 = em.createNamedQuery("Client.GetClientById", ClientE.class);
-//            query1.setParameter("id",query.getSingleResult().getClientE().getId());
-//            return query1.getSingleResult();
-//        }else if (query.getSingleResult().getClientE().equals(null)){
-//            TypedQuery<DriverE> query1 = em.createNamedQuery("Driver.getDriverById", DriverE.class);
-//            query1.setParameter("id",query.getSingleResult().getDriverE().getId());
-//            return query1.getSingleResult();
+
+        Object result = query.getSingleResult();
+//        DriverE dr = query.getSingleResult().getDriverE();
+//        ClientE cl = query.getSingleResult().getClientE();
+//        if (query.getSingleResult().getDriverE() == null){
+//            return 3;
+//        }else if (query.getSingleResult().getClientE() == null){
+//            return 4;
 //        }
+
+        if (query.getSingleResult().getDriverE() == null) {
+            TypedQuery<ClientE> query1 = em.createNamedQuery("Client.GetClientById", ClientE.class);
+            query1.setParameter("id", query.getSingleResult().getClientE().getId());
+            return query1.getSingleResult();
+        } else if (query.getSingleResult().getClientE() == null) {
+            TypedQuery<DriverE> query1 = em.createNamedQuery("Driver.getDriverById", DriverE.class);
+            query1.setParameter("id", query.getSingleResult().getDriverE().getId());
+            return query1.getSingleResult();
+        }
         return query.getSingleResult();
     }
 
@@ -74,24 +81,40 @@ public class TotalService implements Queries {
     }
 
     public void addLogin(LoginE loginE, StateOfLogin state) {
-        em.getTransaction().begin();
         if (state.equals(StateOfLogin.ClIENT)) {
-            loginE.setClientE(addClient(new ClientE()));
+            ClientE client = addClient(new ClientE());
+            em.getTransaction().begin();
+            loginE.setClientE(client);
+            LoginE comLogin = em.merge(loginE);
+            em.getTransaction().commit();
+            em.getTransaction().begin();
+            client.setLogin(comLogin);
+            em.merge(client);
         } else if (state.equals(StateOfLogin.DRIVER)) {
-            loginE.setDriverE(addDriver(new DriverE()));
+            DriverE driver = addDriver(new DriverE());
+            em.getTransaction().begin();
+            loginE.setDriverE(driver);
+            LoginE comLogin = em.merge(loginE);
+            em.getTransaction().commit();
+            em.getTransaction().begin();
+            driver.setLogin(comLogin);
+            em.merge(driver);
         }
-        em.merge(loginE);
         em.getTransaction().commit();
     }
 
     public ClientE addClient(ClientE clientE) {
+        em.getTransaction().begin();
         ClientE client = em.merge(clientE);
+        em.getTransaction().commit();
         return client;
     }
 
     @Override
     public DriverE addDriver(DriverE driver) {
+        em.getTransaction().begin();
         DriverE driverE = em.merge(driver);
+        em.getTransaction().commit();
         return driverE;
     }
 }

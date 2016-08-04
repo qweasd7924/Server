@@ -15,6 +15,10 @@ import javax.inject.Inject;
  */
 public class LoginRegImpl implements LoginReg {
     TotalService totalService = new TotalService();
+    Object o;//driver or client
+
+    public LoginRegImpl() {
+    }
 
     @Override
     public void addNewObj(StateOfLogin clOrDriver, String login, String password, String repassword) {
@@ -28,7 +32,7 @@ public class LoginRegImpl implements LoginReg {
                 loginE.setState(clOrDriver);
                 totalService.addLogin(loginE, clOrDriver);
             }
-        }else {
+        } else {
             // TODO: 03.08.2016 throw same user exists
         }
     }
@@ -37,6 +41,23 @@ public class LoginRegImpl implements LoginReg {
     @Override
     public boolean login(String login, String password) {
         return false;
+    }
+
+
+    public  DriverE getDriverByLogin(String login) {
+        o = totalService.getByLogin(login);
+            if (o == null) {
+                return null;
+            }
+        return (DriverE) o;
+    }
+
+    public ClientE getClientByLogin(String login){
+        o = totalService.getByLogin(login);
+        if (o == null) {
+            return null;
+        }
+        return (ClientE) o;
     }
 
     @Override

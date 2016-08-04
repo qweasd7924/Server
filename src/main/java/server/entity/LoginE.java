@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity(name = "login")
 @NamedQueries(
-        @NamedQuery(name = "Login.GetByLogin", query = "select l from login l where l.login = :login ")
+        @NamedQuery(name = "Login.GetByLogin", query = "select l from login l where login = :login")
 )
 
 public class LoginE {

@@ -11,9 +11,8 @@ import javax.persistence.*;
 @Entity(name = "driver")
 @Table
 @NamedQueries({
-        @NamedQuery(name = "Driver.getAllDrivers", query = "select d from driver d")
-//        ,
-//        @NamedQuery(name = "Driver.getDriverById",query = "select d from driver where id =:id")
+        @NamedQuery(name = "Driver.getAllDrivers", query = "select d from driver d"),
+        @NamedQuery(name = "Driver.getDriverById", query = "select d from driver d where id =:id")
 })
 public class DriverE {
     @Id
@@ -48,7 +47,6 @@ public class DriverE {
         this.status = driverB.getStatus();
         this.balance = driverB.getBalance();
     }
-
 
 
     public int getId() {

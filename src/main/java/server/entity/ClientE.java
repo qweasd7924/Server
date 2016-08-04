@@ -11,9 +11,8 @@ import javax.persistence.*;
 @Entity(name = "client")
 @Table
 @NamedQueries({
-        @NamedQuery(name = "Client.GetAllClients", query = "select c from client c")
-//        ,
-//        @NamedQuery(name = "Client.GetClientById", query = "select c from client c where id =:id")
+        @NamedQuery(name = "Client.GetAllClients", query = "select c from client c"),
+        @NamedQuery(name = "Client.GetClientById", query = "select c from client c where id =:id")
 })
 public class ClientE {
     @Id
