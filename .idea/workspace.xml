@@ -7,29 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18be4781-46c8-47b7-8b60-43b04b0afd8e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/server/entity/Person.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/server/service/PersonService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server/entity/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server/service/PersonService.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/ejb/LoginReg.class" afterPath="$PROJECT_DIR$/target/classes/server/ejb/LoginReg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/ejb/LoginRegImpl.class" afterPath="$PROJECT_DIR$/target/classes/server/ejb/LoginRegImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/entity/CarE.class" afterPath="$PROJECT_DIR$/target/classes/server/entity/CarE.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/entity/DriverE.class" afterPath="$PROJECT_DIR$/target/classes/server/entity/DriverE.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/entity/LoginE.class" afterPath="$PROJECT_DIR$/target/classes/server/entity/LoginE.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/service/Queries.class" afterPath="$PROJECT_DIR$/target/classes/server/service/Queries.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/server/service/TotalService.class" afterPath="$PROJECT_DIR$/target/classes/server/service/TotalService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/EJBTests/loginRegTest.class" afterPath="$PROJECT_DIR$/target/test-classes/EJBTests/loginRegTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/ejb/LoginReg.java" afterPath="$PROJECT_DIR$/src/main/java/server/ejb/LoginReg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/ejb/LoginRegImpl.java" afterPath="$PROJECT_DIR$/src/main/java/server/ejb/LoginRegImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/entity/CarE.java" afterPath="$PROJECT_DIR$/src/main/java/server/entity/CarE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/entity/DriverE.java" afterPath="$PROJECT_DIR$/src/main/java/server/entity/DriverE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/entity/LoginE.java" afterPath="$PROJECT_DIR$/src/main/java/server/entity/LoginE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/service/Queries.java" afterPath="$PROJECT_DIR$/src/main/java/server/service/Queries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server/service/TotalService.java" afterPath="$PROJECT_DIR$/src/main/java/server/service/TotalService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java" afterPath="$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java" />
     </list>
     <ignored path="User.iws" />
@@ -74,113 +51,22 @@
     <favorites_list name="User" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.2708018">
+    <splitter split-orientation="horizontal" split-proportion="0.5400908">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="loginRegTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4230171">
-                  <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+                <state vertical-scroll-proportion="1.2115085">
+                  <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="75" selection-end-column="7" />
                   <folding>
                     <element signature="docComment;class#loginRegTest#0" expanded="false" />
-                    <element signature="method#testGetAll#0;class#loginRegTest#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DriverE.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/server/entity/DriverE.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#2451#2452#0" expanded="true" />
-                    <element signature="e#2478#2479#0" expanded="true" />
-                    <element signature="e#2516#2517#0" expanded="true" />
-                    <element signature="e#2548#2549#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TotalService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/server/service/TotalService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
-                  <folding>
-                    <element signature="docComment;class#TotalService#0" expanded="false" />
-                    <element signature="method#getByLogin#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#getAllDrivers#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#getAllClients#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addDriverInfo#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addClientInfo#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addLogin#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addClient#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addDriver#0;class#TotalService#0" expanded="false" />
-                    <element signature="method#addCar#0;class#TotalService#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LoginRegImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/server/ejb/LoginRegImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LoginReg.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/server/ejb/LoginReg.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="serverdb.login" pinned="false" current-in-tab="false">
-            <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.login">
-              <provider editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="serverdb.client" pinned="false" current-in-tab="false">
-            <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.client">
-              <provider editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="serverdb.driver" pinned="false" current-in-tab="true">
+          <file leaf-file-name="serverdb.driver" pinned="false" current-in-tab="false">
             <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.driver">
               <provider editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
@@ -195,17 +81,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="serverdb.car" pinned="false" current-in-tab="false">
-            <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.car">
-              <provider editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="TotalService.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/server/service/TotalService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7978227">
+                  <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
+                  <folding>
+                    <element signature="docComment;class#TotalService#0" expanded="false" />
+                    <element signature="method#getByLogin#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#getAllDrivers#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#getAllClients#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addDriverInfo#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addClientInfo#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addLogin#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addClient#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addDriver#0;class#TotalService#0" expanded="false" />
+                    <element signature="method#addCar#0;class#TotalService#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -525,7 +421,7 @@
       <recent name="C:\for java\GitHub\Server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.loginRegTest.testAddInfo">
+  <component name="RunManager" selected="JUnit.loginRegTest">
     <configuration default="false" name="loginRegTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1197,9 +1093,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.loginRegTest.testAddInfo" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.loginRegTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.loginRegTest.testGetByLogin" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.loginRegTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.loginRegTest.testAddInfo" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.loginRegTest.getByLogin" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.loginRegTest.testAdd" />
       </list>
@@ -1229,22 +1125,13 @@
       <workItem from="1470163165029" duration="7510000" />
       <workItem from="1470232348280" duration="4944000" />
       <workItem from="1470296175690" duration="5979000" />
-      <workItem from="1470312884219" duration="15475000" />
+      <workItem from="1470312884219" duration="16142000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 22h 31m 01s.xml">
-      <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 22h 34m 17s.xml">
-      <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 22h 44m 40s.xml">
-      <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 22h 46m 02s.xml">
-      <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
+    <history-entry file="loginRegTest - 2016.08.04 at 23h 37m 42s.xml">
+      <configuration name="loginRegTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 22h 48m 07s.xml">
       <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
@@ -1264,9 +1151,18 @@
     <history-entry file="loginRegTest_testAddInfo - 2016.08.04 at 23h 26m 16s.xml">
       <configuration name="loginRegTest.testAddInfo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="loginRegTest_testGetByLogin - 2016.08.04 at 23h 30m 39s.xml">
+      <configuration name="loginRegTest.testGetByLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="loginRegTest_testGetByLogin - 2016.08.04 at 23h 35m 26s.xml">
+      <configuration name="loginRegTest.testGetByLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="loginRegTest_testGetByLogin - 2016.08.04 at 23h 36m 44s.xml">
+      <configuration name="loginRegTest.testGetByLogin" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92075000" />
+    <option name="totallyTimeSpent" value="92742000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1278,8 +1174,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Property Manager" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1299,7 +1195,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.561848" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.5186289" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.5186289" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19364598" sideWeight="0.49317408" order="0" side_tool="false" content_ui="combo" />
@@ -1346,12 +1242,6 @@
           <line>118</line>
           <properties />
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="72" />
@@ -1676,25 +1566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/service/TotalService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
-          <folding>
-            <element signature="docComment;class#TotalService#0" expanded="false" />
-            <element signature="method#getByLogin#0;class#TotalService#0" expanded="false" />
-            <element signature="method#getAllDrivers#0;class#TotalService#0" expanded="false" />
-            <element signature="method#getAllClients#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addDriverInfo#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addClientInfo#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addLogin#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addClient#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addDriver#0;class#TotalService#0" expanded="false" />
-            <element signature="method#addCar#0;class#TotalService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/ejb/LoginReg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1748,17 +1619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4230171">
-          <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
-          <folding>
-            <element signature="docComment;class#loginRegTest#0" expanded="false" />
-            <element signature="method#testGetAll#0;class#loginRegTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.car">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1772,6 +1632,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server/service/TotalService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7978227">
+          <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;class#TotalService#0" expanded="false" />
+            <element signature="method#getByLogin#0;class#TotalService#0" expanded="false" />
+            <element signature="method#getAllDrivers#0;class#TotalService#0" expanded="false" />
+            <element signature="method#getAllClients#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addDriverInfo#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addClientInfo#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addLogin#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addClient#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addDriver#0;class#TotalService#0" expanded="false" />
+            <element signature="method#addCar#0;class#TotalService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/3bd931e/e88efe24-50d8-409a-a15e-51f578e806ef/serverdb.driver">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1782,6 +1661,16 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/java/EJBTests/loginRegTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2115085">
+          <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="75" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#loginRegTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

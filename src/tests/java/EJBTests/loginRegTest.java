@@ -27,6 +27,12 @@ public class loginRegTest extends DBUnitConfig {
         super(name);
     }
 
+
+    public void testAdd() throws Exception {
+        logService.addNewObj(StateOfLogin.ClIENT, "login cl1", "123", "123");
+        logService.addNewObj(StateOfLogin.DRIVER, "login dr1", "234", "234");
+    }
+
     @Before
     public void setUp() throws Exception {
         super.setUp();
@@ -34,12 +40,6 @@ public class loginRegTest extends DBUnitConfig {
 
     }
 
-    public void testAdd() throws Exception {
-
-        logService.addNewObj(StateOfLogin.ClIENT, "login cl1", "123", "123");
-        logService.addNewObj(StateOfLogin.DRIVER, "login dr1", "234", "234");
-
-    }
 
     @Test
     public void testAddInfo() {
@@ -48,6 +48,7 @@ public class loginRegTest extends DBUnitConfig {
         DriverE driver = logService.addDriverInfo("login dr1", 100, 3, "ashot", "dagistan)", 12345, StateOfDriverEnum.FREE);
         Assert.assertEquals(driver.getFullName(),"ashot");
         CarE car = logService.addCarInfo("login dr1","sk177-bk","vaz",15,180);
+        Assert.assertEquals(car.getCapacity(),180);
     }
 
     @Test
@@ -64,14 +65,15 @@ public class loginRegTest extends DBUnitConfig {
         }
     }
 
-    @Test
-//    @Test(timeout = 100)
-    public void testGetByLogin() throws Exception {
-        DriverE d = logService.getDriverByLogin("login dr1");
-        ClientE c = logService.getClientByLogin("login cl1");
-        ClientE c1 = logService.getClientByLogin("login cl");
-        int b = 1;
-    }
+//    @Test
+//    public void testGetByLogin() throws Exception {
+//        String logDr = "login dr1";
+//        String logCl = "login cl1";
+//        DriverE d = logService.getDriverByLogin(logDr);
+//        ClientE c = logService.getClientByLogin(logCl);
+////        Assert.assertEquals(d.getId(),logService.getDriverByLogin(logDr).getId());
+////        Assert.assertEquals(c.getId(),logService.getClientByLogin(logCl).getId());
+//    }
 }
 
 
