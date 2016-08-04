@@ -5,8 +5,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import server.ejb.LoginRegImpl;
+import server.entity.CarE;
 import server.entity.ClientE;
 import server.entity.DriverE;
+import server.entity.Enum.StateOfDriverEnum;
 import server.entity.Enum.StateOfLogin;
 import server.service.TotalService;
 
@@ -41,7 +43,11 @@ public class loginRegTest extends DBUnitConfig {
 
     @Test
     public void testAddInfo() {
-
+        ClientE client = logService.addClientInfo("login cl1", "vasya", 880055535, "a far,far away)");
+        Assert.assertEquals("vasya", client.getFullName());
+        DriverE driver = logService.addDriverInfo("login dr1", 100, 3, "ashot", "dagistan)", 12345, StateOfDriverEnum.FREE);
+        Assert.assertEquals(driver.getFullName(),"ashot");
+        CarE car = logService.addCarInfo("login dr1","sk177-bk","vaz",15,180);
     }
 
     @Test

@@ -22,5 +22,4 @@ public interface Queries {
 
     public DriverE addDriver(DriverE driver);
 
-    void addDriverInfo(server.bean.DriverB driverB);
 }

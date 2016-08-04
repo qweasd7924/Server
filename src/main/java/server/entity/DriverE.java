@@ -25,7 +25,7 @@ public class DriverE {
     @Column
     private int experience;
     @Column
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private StateOfDriverEnum status;
     @Column
     private String location;
@@ -34,6 +34,10 @@ public class DriverE {
 
     @OneToOne(mappedBy = "driverE")
     private LoginE login;
+
+    @OneToOne
+    @JoinColumn(name = "car_fk")
+    private CarE carE;
 
     public DriverE() {
     }
@@ -111,5 +115,13 @@ public class DriverE {
 
     public void setLogin(LoginE login) {
         this.login = login;
+    }
+
+    public CarE getCarE() {
+        return carE;
+    }
+
+    public void setCarE(CarE carE) {
+        this.carE = carE;
     }
 }

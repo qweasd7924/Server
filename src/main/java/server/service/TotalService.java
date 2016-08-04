@@ -1,11 +1,8 @@
 package server.service;
 
 import server.bean.ClientB;
-import server.entity.ClientE;
-import server.entity.DriverE;
+import server.entity.*;
 import server.entity.Enum.StateOfLogin;
-import server.entity.LoginE;
-import server.entity.OrderE;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -28,13 +25,6 @@ public class TotalService implements Queries {
         }
 
         Object result = query.getSingleResult();
-//        DriverE dr = query.getSingleResult().getDriverE();
-//        ClientE cl = query.getSingleResult().getClientE();
-//        if (query.getSingleResult().getDriverE() == null){
-//            return 3;
-//        }else if (query.getSingleResult().getClientE() == null){
-//            return 4;
-//        }
 
         if (query.getSingleResult().getDriverE() == null) {
             TypedQuery<ClientE> query1 = em.createNamedQuery("Client.GetClientById", ClientE.class);
@@ -66,17 +56,16 @@ public class TotalService implements Queries {
     }
 
 
-    @Override
-    public void addDriverInfo(server.bean.DriverB driverB) {
+    public void addDriverInfo(DriverE driverE) {
         em.getTransaction().begin();
-        DriverE result = em.merge(new DriverE(driverB));
+        DriverE result = em.merge(driverE);
         em.getTransaction().commit();
     }
 
 
-    public void addClientInfo(ClientB clientB) {
+    public void addClientInfo(ClientE clientE) {
         em.getTransaction().begin();
-        ClientE result = em.merge(new ClientE(clientB));
+        ClientE result = em.merge(clientE);
         em.getTransaction().commit();
     }
 
@@ -91,6 +80,7 @@ public class TotalService implements Queries {
             client.setLogin(comLogin);
             em.merge(client);
         } else if (state.equals(StateOfLogin.DRIVER)) {
+            CarE car = addCar(new CarE());
             DriverE driver = addDriver(new DriverE());
             em.getTransaction().begin();
             loginE.setDriverE(driver);
@@ -98,7 +88,10 @@ public class TotalService implements Queries {
             em.getTransaction().commit();
             em.getTransaction().begin();
             driver.setLogin(comLogin);
+            driver.setCarE(car);
+            car.setDriver(driver);
             em.merge(driver);
+            em.merge(car);
         }
         em.getTransaction().commit();
     }
@@ -116,5 +109,19 @@ public class TotalService implements Queries {
         DriverE driverE = em.merge(driver);
         em.getTransaction().commit();
         return driverE;
+    }
+
+    public CarE addCar(CarE car){
+        em.getTransaction().begin();
+        CarE res = em.merge(car);
+        em.getTransaction().commit();
+        return res;
+    }
+
+    public CarE getCarOfDriver(int idOfCar){
+        TypedQuery<CarE> query = em.createNamedQuery("Car.GetCarById",CarE.class);
+        query.setParameter("id",idOfCar);
+        if (query.getResultList().isEmpty()){return null;}
+        return query.getSingleResult();
     }
 }

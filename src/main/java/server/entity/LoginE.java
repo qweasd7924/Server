@@ -21,8 +21,8 @@ public class LoginE {
     @Column
     String password;
 
-    @Enumerated
-    StateOfLogin state;
+    @Enumerated(EnumType.STRING)
+    StateOfLogin state;//driver or client
 
     @OneToOne
     @JoinColumn(name = "driver_fk")
