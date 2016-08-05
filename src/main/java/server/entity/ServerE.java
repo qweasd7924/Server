@@ -3,8 +3,8 @@ package server.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "serverdb")
-@NamedQuery(name = "Server.getServerByPort",query = "select s from serverdb s where s.port = :port")
+@Entity(name = "server")
+@NamedQuery(name = "Server.getServerByPort",query = "select s from server s where s.port = :port")
 //@NamedQuery(name = "Author.getAuthorById", query = "SELECT a FROM authors a WHERE a.id = :id")}
 
 public class ServerE implements Serializable {
