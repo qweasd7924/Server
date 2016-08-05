@@ -1,47 +1,48 @@
 package server.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
- * Created by ����� on 30.07.2016.
+ * Created by ����� on 30.07.2016.
  */
 @Entity(name = "orders")
 @Table
 public class OrderE {
     @Id
-    @GeneratedValue
-    private int idOrder;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+// TODO: 05.08.2016 разобраться с созданием таблицы заказа
+
+    // TODO: 05.08.2016 m to o разобраться
+//    @ManyToOne
+//    @JoinColumn
+//    private DriverE driverE;
 
 //    @ManyToOne
-//    private DriverE driverE;
-//
-//    @ManyToOne
+//    @JoinColumn
 //    private ClientE clientE;
 
     @OneToOne
-    @JoinColumn(name = "order_info_fk")
-    private OrderInfoE orderInfoE;
+    @JoinColumn(name = "info_fk")
+    private OrderInfoE orderInfo;
 
     @Column
-    String data;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dateOfAdd;
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
+    @Column(name = "order_number")
+    private int numberOfOrder;
 
     public OrderE() {
     }
 
-    public int getIdOrder() {
-        return idOrder;
+    public int getId() {
+        return id;
     }
 
-    public void setIdOrder(int idOrder) {
-        this.idOrder = idOrder;
+    public void setId(int id) {
+        this.id = id;
     }
 
 //    public DriverE getDriverE() {
@@ -59,12 +60,28 @@ public class OrderE {
 //    public void setClientE(ClientE clientE) {
 //        this.clientE = clientE;
 //    }
-//-------------------
-    public OrderInfoE getOrderInfoE() {
-        return orderInfoE;
+
+    public OrderInfoE getOrderInfo() {
+        return orderInfo;
     }
 
-    public void setOrderInfoE(OrderInfoE orderInfoE) {
-        this.orderInfoE = orderInfoE;
+    public void setOrderInfo(OrderInfoE orderInfoE) {
+        this.orderInfo = orderInfoE;
+    }
+
+    public Date getDateOfAdd() {
+        return dateOfAdd;
+    }
+
+    public void setDateOfAdd(Date dateOfAdd) {
+        this.dateOfAdd = dateOfAdd;
+    }
+
+    public int getNumberOfOrder() {
+        return numberOfOrder;
+    }
+
+    public void setNumberOfOrder(int numberOfOrder) {
+        this.numberOfOrder = numberOfOrder;
     }
 }

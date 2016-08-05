@@ -75,10 +75,10 @@ public class TotalService implements Queries {
             em.getTransaction().begin();
             loginE.setClientE(client);
             LoginE comLogin = em.merge(loginE);
-            em.getTransaction().commit();
-            em.getTransaction().begin();
-            client.setLogin(comLogin);
-            em.merge(client);
+//            em.getTransaction().commit();
+//            em.getTransaction().begin();
+//            client.setLogin(comLogin);
+//            em.merge(client);
         } else if (state.equals(StateOfLogin.DRIVER)) {
             CarE car = addCar(new CarE());
             DriverE driver = addDriver(new DriverE());
@@ -124,4 +124,6 @@ public class TotalService implements Queries {
         if (query.getResultList().isEmpty()){return null;}
         return query.getSingleResult();
     }
+
+
 }

@@ -27,7 +27,8 @@ public class LoginE {
     @OneToOne
     @JoinColumn(name = "driver_fk")
     private DriverE driverE;
-    @OneToOne
+
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "client_fk")
     private ClientE clientE;
 

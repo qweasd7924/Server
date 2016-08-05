@@ -29,12 +29,12 @@ public class ClientE {
     @OneToOne(mappedBy = "clientE")
     private LoginE login;
 
-    @OneToMany()
+//    @OneToMany()
 //    @JoinColumn(name = "orders_fk")
 //    @JoinTable(name = "jnd_cl_ord",
 //            joinColumns = @JoinColumn(name = "client_for_ord_fk"),
 //    inverseJoinColumns = @JoinColumn(name = "orderCl_fk"))
-    private List<OrderE> orders;
+//    private List<OrderE> orders;
     // TODO: 05.08.2016 двунаправления связь м то о с ордер
 
     public ClientE() {
@@ -87,11 +87,11 @@ public class ClientE {
         this.login = login;
     }
 
-    public List<OrderE> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<OrderE> orders) {
-        this.orders = orders;
-    }
+//    public List<OrderE> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(List<OrderE> orders) {
+//        this.orders = orders;
+//    }
 }

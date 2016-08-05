@@ -3,20 +3,18 @@ package server.entity;
 import server.entity.Enum.StateOfOrder;
 
 import javax.persistence.*;
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by Павел on 05.08.2016.
  */
-@Entity
+@Entity(name = "order_info")
 @Table
 public class OrderInfoE {
     @Id
     @GeneratedValue
     private int idOrdInfo;
 
-    @OneToOne(mappedBy = "orderInfoE")
+    @OneToOne(mappedBy = "orderInfo")
     private OrderE order;
 
     @Column
@@ -29,9 +27,6 @@ public class OrderInfoE {
     private String cargoParams;
     @Column
     private String comments;
-    @Column
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dateOfAdd;
     @Column
     private String cargoLocation;
     @Column
@@ -94,14 +89,6 @@ public class OrderInfoE {
 
     public void setComments(String comments) {
         this.comments = comments;
-    }
-
-    public Date getDateOfAdd() {
-        return dateOfAdd;
-    }
-
-    public void setDateOfAdd(Date dateOfAdd) {
-        this.dateOfAdd = dateOfAdd;
     }
 
     public String getCargoLocation() {

@@ -40,15 +40,14 @@ public class DriverE {
     @JoinColumn(name = "car_fk")
     private CarE carE;
 
-    @OneToMany
+//    @OneToMany
 //    @JoinColumn(name = "orders_fk")
 //    @JoinTable(name = "jnd_dr_ord",
 //            joinColumns = @JoinColumn(name = "driver_for_ord_fk"),
 //            inverseJoinColumns = @JoinColumn(name = "orderDr_fk"))
 
-    private List<OrderE> orders;
+//    private List<OrderE> orders;
 
-    // TODO: 05.08.2016  двунапр связь к мтоо к заказу
     public DriverE() {
     }
 
@@ -135,11 +134,12 @@ public class DriverE {
         this.carE = carE;
     }
 
-    public List<OrderE> getOrders() {
-        return orders;
-    }
+//    public List<OrderE> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(List<OrderE> orders) {
+//        this.orders = orders;
+//    }
 
-    public void setOrders(List<OrderE> orders) {
-        this.orders = orders;
-    }
 }
