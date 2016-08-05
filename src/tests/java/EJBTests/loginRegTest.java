@@ -28,7 +28,7 @@ public class loginRegTest extends DBUnitConfig {
     }
 
 
-    public void testAdd() throws Exception {
+    public void add() throws Exception {
         logService.addNewObj(StateOfLogin.ClIENT, "login cl1", "123", "123");
         logService.addNewObj(StateOfLogin.DRIVER, "login dr1", "234", "234");
     }
@@ -36,7 +36,7 @@ public class loginRegTest extends DBUnitConfig {
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        testAdd();
+        add();
 
     }
 

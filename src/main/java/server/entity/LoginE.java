@@ -26,7 +26,7 @@ public class LoginE {
 
     @OneToOne
     @JoinColumn(name = "driver_fk")
-    DriverE driverE;
+    private DriverE driverE;
     @OneToOne
     @JoinColumn(name = "client_fk")
     private ClientE clientE;
