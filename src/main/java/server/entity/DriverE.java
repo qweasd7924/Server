@@ -39,14 +39,19 @@ public class DriverE {
     @OneToOne
     @JoinColumn(name = "car_fk")
     private CarE carE;
+//
+//    @OneToMany(mappedBy = "driverE")
+//    private List<OrderE> orders;
 
-//    @OneToMany
+
+    @OneToMany//if uncomment mapped by - don't work
+    private List<OrderE> orders;
+
 //    @JoinColumn(name = "orders_fk")
 //    @JoinTable(name = "jnd_dr_ord",
 //            joinColumns = @JoinColumn(name = "driver_for_ord_fk"),
 //            inverseJoinColumns = @JoinColumn(name = "orderDr_fk"))
 
-//    private List<OrderE> orders;
 
     public DriverE() {
     }
@@ -134,12 +139,12 @@ public class DriverE {
         this.carE = carE;
     }
 
-//    public List<OrderE> getOrders() {
-//        return orders;
-//    }
-//
-//    public void setOrders(List<OrderE> orders) {
-//        this.orders = orders;
-//    }
+    public List<OrderE> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderE> orders) {
+        this.orders = orders;
+    }
 
 }

@@ -15,13 +15,13 @@ public class OrderE {
 // TODO: 05.08.2016 разобраться с созданием таблицы заказа
 
     // TODO: 05.08.2016 m to o разобраться
-//    @ManyToOne
-//    @JoinColumn
-//    private DriverE driverE;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "driver_fk")
+    private DriverE driverE;
 
-//    @ManyToOne
-//    @JoinColumn
-//    private ClientE clientE;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "client_fk")
+    private ClientE clientE;
 
     @OneToOne
     @JoinColumn(name = "info_fk")
@@ -45,21 +45,21 @@ public class OrderE {
         this.id = id;
     }
 
-//    public DriverE getDriverE() {
-//        return driverE;
-//    }
-//
-//    public void setDriverE(DriverE driverE) {
-//        this.driverE = driverE;
-//    }
-//
-//    public ClientE getClientE() {
-//        return clientE;
-//    }
-//
-//    public void setClientE(ClientE clientE) {
-//        this.clientE = clientE;
-//    }
+    public DriverE getDriverE() {
+        return driverE;
+    }
+
+    public void setDriverE(DriverE driverE) {
+        this.driverE = driverE;
+    }
+
+    public ClientE getClientE() {
+        return clientE;
+    }
+
+    public void setClientE(ClientE clientE) {
+        this.clientE = clientE;
+    }
 
     public OrderInfoE getOrderInfo() {
         return orderInfo;
