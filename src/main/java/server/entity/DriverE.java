@@ -4,6 +4,7 @@ import server.bean.DriverB;
 import server.entity.Enum.StateOfDriverEnum;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,19 +40,9 @@ public class DriverE {
     @OneToOne
     @JoinColumn(name = "car_fk")
     private CarE carE;
-//
-//    @OneToMany(mappedBy = "driverE")
-//    private List<OrderE> orders;
-
 
     @OneToMany//if uncomment mapped by - don't work
     private List<OrderE> orders;
-
-//    @JoinColumn(name = "orders_fk")
-//    @JoinTable(name = "jnd_dr_ord",
-//            joinColumns = @JoinColumn(name = "driver_for_ord_fk"),
-//            inverseJoinColumns = @JoinColumn(name = "orderDr_fk"))
-
 
     public DriverE() {
     }
@@ -147,4 +138,10 @@ public class DriverE {
         this.orders = orders;
     }
 
+    public void addOrder(OrderE order) {
+        if (orders == null){
+            orders = new ArrayList<OrderE>();
+        }
+        orders.add(order);
+    }
 }

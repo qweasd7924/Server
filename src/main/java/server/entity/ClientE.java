@@ -4,6 +4,7 @@ import server.bean.ClientB;
 import server.entity.Enum.StateOfLogin;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +33,6 @@ public class ClientE {
     @OneToMany()
 //    @JoinColumn(name = "orders_fk") didn't create client - order table
     private List<OrderE> orders;
-    // TODO: 05.08.2016 двунаправления связь м то о с ордер
 
     public ClientE() {
     }
@@ -90,5 +90,12 @@ public class ClientE {
 
     public void setOrders(List<OrderE> orders) {
         this.orders = orders;
+    }
+
+    public void addOrder(OrderE order){
+        if (orders == null){
+            orders = new ArrayList<OrderE>();
+        }
+        orders.add(order);
     }
 }

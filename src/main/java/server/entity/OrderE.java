@@ -12,9 +12,7 @@ public class OrderE {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-// TODO: 05.08.2016 разобраться с созданием таблицы заказа
 
-    // TODO: 05.08.2016 m to o разобраться
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "driver_fk")
     private DriverE driverE;

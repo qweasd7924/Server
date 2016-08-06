@@ -14,7 +14,6 @@ public class OrderEJB {
 
     public OrderE addOrder(ClientE clientE){
         orderService.addNewOrder(clientE);
-
         return null;
     }
 

@@ -1,11 +1,8 @@
 package server.ejb;
 
-import server.entity.CarE;
-import server.entity.ClientE;
-import server.entity.DriverE;
+import server.entity.*;
 import server.entity.Enum.StateOfDriverEnum;
 import server.entity.Enum.StateOfLogin;
-import server.entity.LoginE;
 import server.service.TotalService;
 
 /**
@@ -112,4 +109,6 @@ public class LoginRegImpl implements LoginReg {
         }
         return car;
     }
+
+
 }
