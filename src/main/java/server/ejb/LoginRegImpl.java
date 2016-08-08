@@ -35,8 +35,9 @@ public class LoginRegImpl implements LoginReg {
 
     @Override
     public boolean login(String login, String password) {
-
+        // TODO: 08.08.2016 start to do login ejb 
         // TODO: 04.08.2016  returm xml
+        
         return false;
     }
 

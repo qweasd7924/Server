@@ -7,6 +7,7 @@ import java.util.Date;
  * Created by ����� on 30.07.2016.
  */
 @Entity(name = "orders")
+@NamedQuery(name = "Order.getById",query = "select o from orders o where id =:id")
 @Table
 public class OrderE {
     @Id

@@ -17,7 +17,7 @@ public class OrderInfoE {
     @OneToOne(mappedBy = "orderInfo")
     private OrderE order;
 
-    @Column
+    @Enumerated(EnumType.STRING)
     private StateOfOrder stateOfOrder;
     @Column
     private String loaningAddress;
@@ -33,6 +33,18 @@ public class OrderInfoE {
     private int price;
 
     public OrderInfoE() {
+    }
+
+    public OrderInfoE(StateOfOrder stateOfOrder, String loaningAddress,
+                      String ulloaningAddress, String cargoParams,
+                      String comments, String cargoLocation, int price) {
+        this.stateOfOrder = stateOfOrder;
+        this.loaningAddress = loaningAddress;
+        this.ulloaningAddress = ulloaningAddress;
+        this.cargoParams = cargoParams;
+        this.comments = comments;
+        this.cargoLocation = cargoLocation;
+        this.price = price;
     }
 
     public int getIdOrdInfo() {
