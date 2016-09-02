@@ -11,5 +11,5 @@ import java.io.File;
 public interface ParseXML {
     public File parseDriverXML(DriverE driver);
 
-    public File parseClientXML(ClientE client);
+    public File parseClientXML(ClientE client) throws Exception;
 }

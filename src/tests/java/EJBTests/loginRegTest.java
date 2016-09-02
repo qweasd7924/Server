@@ -65,16 +65,6 @@ public class loginRegTest extends DBUnitConfig {
             Assert.assertEquals(o.getLogin().getLogin(), "login dr1");
         }
     }
-
-//    @Test
-//    public void testGetByLogin() throws Exception {
-//        String logDr = "login dr1";
-//        String logCl = "login cl1";
-//        DriverE d = logService.getDriverByLogin(logDr);
-//        ClientE c = logService.getClientByLogin(logCl);
-////        Assert.assertEquals(d.getId(),logService.getDriverByLogin(logDr).getId());
-////        Assert.assertEquals(c.getId(),logService.getClientByLogin(logCl).getId());
-//    }
 }
 
 
