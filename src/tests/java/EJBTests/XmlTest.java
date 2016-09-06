@@ -39,6 +39,7 @@ public class XmlTest extends DBUnitConfig {
         add();
         ClientE client = logService.addClientInfo("login cl1", "vasya", 880055535, "a far,far away)");
         DriverE driver = logService.addDriverInfo("login dr1", 100, 3, "ashot", "dagistan)", 12345, StateOfDriverEnum.FREE);
+
     }
 
     @Test

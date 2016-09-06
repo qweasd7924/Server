@@ -4,10 +4,6 @@ import server.entity.ClientE;
 import server.entity.LoginE;
 import server.entity.OrderE;
 
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
@@ -30,7 +26,7 @@ public class XmlClient {
         this.id= client.getId();
         this.fullName = client.getFullName();
         this.phone = client.getPhone();
-        this.adress = client.getAdress();
+        this.adress = client.getAddress();
         this.login = client.getLogin();
 //        for (OrderE o :client.getOrders()){
 //            orders.add(o);

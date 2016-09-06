@@ -7,7 +7,7 @@ public class ClientB {
     private int id;
     private String fullName;
     private int phone;
-    private String adress;
+    private String address;
 
     public int getId() {
         return id;
@@ -33,11 +33,11 @@ public class ClientB {
         this.phone = phone;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

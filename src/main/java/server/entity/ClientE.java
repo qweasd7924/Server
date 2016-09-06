@@ -1,11 +1,8 @@
 package server.entity;
 
 import server.bean.ClientB;
-import server.entity.Enum.StateOfLogin;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +26,7 @@ public class ClientE {
     @Column
     private int phone;
     @Column
-    private String adress;
+    private String address;
 
 
     @OneToOne(mappedBy = "clientE")
@@ -46,7 +43,7 @@ public class ClientE {
         this.id = client.getId();
         this.fullName = client.getFullName();
         this.phone = client.getPhone();
-        this.adress = client.getAdress();
+        this.address = client.getAddress();
     }
 
     public int getId() {
@@ -73,12 +70,12 @@ public class ClientE {
         this.phone = phone;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     public LoginE getLogin() {

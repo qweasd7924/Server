@@ -20,9 +20,9 @@ public class OrderInfoE {
     @Enumerated(EnumType.STRING)
     private StateOfOrder stateOfOrder;
     @Column
-    private String loaningAddress;
+    private String loadingAddress;
     @Column
-    private String ulloaningAddress;
+    private String unloadingAddress;
     @Column
     private String cargoParams;
     @Column
@@ -35,12 +35,12 @@ public class OrderInfoE {
     public OrderInfoE() {
     }
 
-    public OrderInfoE(StateOfOrder stateOfOrder, String loaningAddress,
-                      String ulloaningAddress, String cargoParams,
+    public OrderInfoE(StateOfOrder stateOfOrder, String loadingAddress,
+                      String unloadingAddress, String cargoParams,
                       String comments, String cargoLocation, int price) {
         this.stateOfOrder = stateOfOrder;
-        this.loaningAddress = loaningAddress;
-        this.ulloaningAddress = ulloaningAddress;
+        this.loadingAddress = loadingAddress;
+        this.unloadingAddress = unloadingAddress;
         this.cargoParams = cargoParams;
         this.comments = comments;
         this.cargoLocation = cargoLocation;
@@ -71,20 +71,20 @@ public class OrderInfoE {
         this.stateOfOrder = stateOfOrder;
     }
 
-    public String getLoaningAddress() {
-        return loaningAddress;
+    public String getLoadingAddress() {
+        return loadingAddress;
     }
 
-    public void setLoaningAddress(String loaningAddress) {
-        this.loaningAddress = loaningAddress;
+    public void setLoadingAddress(String loaningAddress) {
+        this.loadingAddress = loaningAddress;
     }
 
-    public String getUlloaningAddress() {
-        return ulloaningAddress;
+    public String getUnloadingAddress() {
+        return unloadingAddress;
     }
 
-    public void setUlloaningAddress(String ulloaningAddress) {
-        this.ulloaningAddress = ulloaningAddress;
+    public void setUnloadingAddress(String ulloaningAddress) {
+        this.unloadingAddress = ulloaningAddress;
     }
 
     public String getCargoParams() {

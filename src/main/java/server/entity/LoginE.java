@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Created by Павел on 01.08.2016.
  */
-//@XmlRootElement
+
 @Entity(name = "login")
 @NamedQueries(
         @NamedQuery(name = "Login.GetByLogin", query = "select l from login l where login = :login")

@@ -62,7 +62,7 @@ public class LoginRegImpl implements LoginReg {
         if (client != null) {
             client.setFullName(fullName);
             client.setPhone(phone);
-            client.setAdress(address);
+            client.setAddress(address);
             totalService.addClientInfo(client);
         } else {
             return null;
