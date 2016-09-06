@@ -4,12 +4,14 @@ import server.bean.DriverB;
 import server.entity.Enum.StateOfDriverEnum;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Павел on 30.07.2016.
  */
+@XmlRootElement
 @Entity(name = "driver")
 @Table
 @NamedQueries({

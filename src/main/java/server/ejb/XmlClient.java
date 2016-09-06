@@ -1,52 +1,40 @@
-package server.entity;
+package server.ejb;
 
-import server.bean.ClientB;
-import server.entity.Enum.StateOfLogin;
+import server.entity.ClientE;
+import server.entity.LoginE;
+import server.entity.OrderE;
 
-import javax.persistence.*;
-import javax.xml.bind.annotation.XmlElement;
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Павел on 30.07.2016.
+ * Created by Павел on 04.09.2016.
  */
 @XmlRootElement
-@Entity(name = "client")
-@Table
-@NamedQueries({
-        @NamedQuery(name = "Client.GetAllClients", query = "select c from client c"),
-        @NamedQuery(name = "Client.GetClientById", query = "select c from client c where id =:id")
-})
-public class ClientE {
-    @Id
-    @GeneratedValue
+public class XmlClient {
     private int id;
-    @Column
     private String fullName;
-    @Column
     private int phone;
-    @Column
     private String adress;
-
-
-    @OneToOne(mappedBy = "clientE")
     private LoginE login;
-
-    @OneToMany()
-//    @JoinColumn(name = "orders_fk") didn't create client - order table
     private List<OrderE> orders;
 
-    public ClientE() {
+    public XmlClient() {
     }
 
-    public ClientE(ClientB client) {
-        this.id = client.getId();
+    XmlClient(ClientE client ){
+        this.id= client.getId();
         this.fullName = client.getFullName();
         this.phone = client.getPhone();
         this.adress = client.getAdress();
+        this.login = client.getLogin();
+//        for (OrderE o :client.getOrders()){
+//            orders.add(o);
+//        }
     }
 
     public int getId() {
@@ -95,12 +83,5 @@ public class ClientE {
 
     public void setOrders(List<OrderE> orders) {
         this.orders = orders;
-    }
-
-    public void addOrder(OrderE order){
-        if (orders == null){
-            orders = new ArrayList<OrderE>();
-        }
-        orders.add(order);
     }
 }

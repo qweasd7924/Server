@@ -75,10 +75,10 @@ public class TotalService implements Queries {
             em.getTransaction().begin();
             loginE.setClientE(client);
             LoginE comLogin = em.merge(loginE);
-//            em.getTransaction().commit();
-//            em.getTransaction().begin();
-//            client.setLogin(comLogin);
-//            em.merge(client);
+            em.getTransaction().commit();
+            em.getTransaction().begin();
+            client.setLogin(comLogin);
+            em.merge(client);
         } else if (state.equals(StateOfLogin.DRIVER)) {
             CarE car = addCar(new CarE());
             DriverE driver = addDriver(new DriverE());
@@ -111,17 +111,19 @@ public class TotalService implements Queries {
         return driverE;
     }
 
-    public CarE addCar(CarE car){
+    public CarE addCar(CarE car) {
         em.getTransaction().begin();
         CarE res = em.merge(car);
         em.getTransaction().commit();
         return res;
     }
 
-    public CarE getCarOfDriver(int idOfCar){
-        TypedQuery<CarE> query = em.createNamedQuery("Car.GetCarById",CarE.class);
-        query.setParameter("id",idOfCar);
-        if (query.getResultList().isEmpty()){return null;}
+    public CarE getCarOfDriver(int idOfCar) {
+        TypedQuery<CarE> query = em.createNamedQuery("Car.GetCarById", CarE.class);
+        query.setParameter("id", idOfCar);
+        if (query.getResultList().isEmpty()) {
+            return null;
+        }
         return query.getSingleResult();
     }
 

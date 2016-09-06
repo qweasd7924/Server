@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - @localhost" uuid="e88efe24-50d8-409a-a15e-51f578e806ef">
+  <data-source name="MySQL - serverdb@localhost" uuid="3689fa75-c813-4487-850f-32102a2b558a">
     <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -8,161 +8,161 @@
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="serverdb"/>
-      <table id="2" parent="1" name="driver_orders"/>
-      <table id="3" parent="1" name="hibernate_sequence"/>
-      <table id="4" parent="1" name="car"/>
-      <table id="5" parent="1" name="client"/>
-      <table id="6" parent="1" name="driver"/>
-      <table id="7" parent="1" name="client_orders"/>
+      <table id="2" parent="1" name="car"/>
+      <table id="3" parent="1" name="client"/>
+      <table id="4" parent="1" name="client_orders"/>
+      <table id="5" parent="1" name="driver"/>
+      <table id="6" parent="1" name="driver_orders"/>
+      <table id="7" parent="1" name="hibernate_sequence"/>
       <table id="8" parent="1" name="login"/>
       <table id="9" parent="1" name="order_info"/>
       <table id="10" parent="1" name="orders"/>
       <table id="11" parent="1" name="server"/>
-      <column id="12" parent="2" name="driver_id">
+      <column id="12" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="13" parent="2" name="orders_id">
-        <mandatory>1</mandatory>
+      <column id="13" parent="2" name="age">
         <data-type>int(11)</data-type>
       </column>
-      <index id="14" parent="2" name="FKi7plfmhx4yydiesakg9pkufo6">
-        <columns>driver_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <index id="15" parent="2" name="UK_44ps1c1ig5j6rnbowpc3ovqcl">
-        <columns>orders_id</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="16" parent="2" name="UK_44ps1c1ig5j6rnbowpc3ovqcl">
-        <columns>orders_id</columns>
-        <underlying-index>UK_44ps1c1ig5j6rnbowpc3ovqcl</underlying-index>
-      </key>
-      <foreign-key id="17" parent="2" name="FKd0k27m0b5quxxwagy5f616de1">
-        <columns>orders_id</columns>
-        <ref-key>~.orders.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <foreign-key id="18" parent="2" name="FKi7plfmhx4yydiesakg9pkufo6">
-        <columns>driver_id</columns>
-        <ref-key>~.driver.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="19" parent="3" name="next_val">
-        <data-type>bigint(20)</data-type>
-      </column>
-      <column id="20" parent="4" name="id">
-        <mandatory>1</mandatory>
+      <column id="14" parent="2" name="capacity">
         <data-type>int(11)</data-type>
       </column>
-      <column id="21" parent="4" name="age">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="22" parent="4" name="capacity">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="23" parent="4" name="model">
+      <column id="15" parent="2" name="model">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="24" parent="4" name="number">
+      <column id="16" parent="2" name="number">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="25" parent="4" name="PRIMARY">
+      <key id="17" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="26" parent="5" name="id">
+      <column id="18" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="27" parent="5" name="adress">
+      <column id="19" parent="3" name="adress">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="28" parent="5" name="fullName">
+      <column id="20" parent="3" name="fullName">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="29" parent="5" name="phone">
+      <column id="21" parent="3" name="phone">
         <data-type>int(11)</data-type>
       </column>
-      <key id="30" parent="5" name="PRIMARY">
+      <key id="22" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="31" parent="6" name="id">
+      <column id="23" parent="4" name="client_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="32" parent="6" name="balance">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="33" parent="6" name="experience">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="34" parent="6" name="fullName">
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="35" parent="6" name="location">
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="36" parent="6" name="phone">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="37" parent="6" name="status">
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="38" parent="6" name="car_fk">
-        <data-type>int(11)</data-type>
-      </column>
-      <index id="39" parent="6" name="FKmarpkj0ph1wehwo3v7cp53x40">
-        <columns>car_fk</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <key id="40" parent="6" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <foreign-key id="41" parent="6" name="FKmarpkj0ph1wehwo3v7cp53x40">
-        <columns>car_fk</columns>
-        <ref-key>~.car.PRIMARY</ref-key>
-        <cascade-update-rule>restrict</cascade-update-rule>
-        <cascade-delete-rule>restrict</cascade-delete-rule>
-      </foreign-key>
-      <column id="42" parent="7" name="client_id">
+      <column id="24" parent="4" name="orders_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="43" parent="7" name="orders_id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <index id="44" parent="7" name="FKjwct7foag4dx0nrmipr5w5prx">
+      <index id="25" parent="4" name="FKjwct7foag4dx0nrmipr5w5prx">
         <columns>client_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="45" parent="7" name="UK_h6x1ubqvgqnj82atuvlpeiijc">
+      <index id="26" parent="4" name="UK_h6x1ubqvgqnj82atuvlpeiijc">
         <columns>orders_id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="46" parent="7" name="UK_h6x1ubqvgqnj82atuvlpeiijc">
+      <key id="27" parent="4" name="UK_h6x1ubqvgqnj82atuvlpeiijc">
         <columns>orders_id</columns>
         <underlying-index>UK_h6x1ubqvgqnj82atuvlpeiijc</underlying-index>
       </key>
-      <foreign-key id="47" parent="7" name="FKgylcpdber6tdw9hbry7m2sb9a">
+      <foreign-key id="28" parent="4" name="FKgylcpdber6tdw9hbry7m2sb9a">
         <columns>orders_id</columns>
         <ref-key>~.orders.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="48" parent="7" name="FKjwct7foag4dx0nrmipr5w5prx">
+      <foreign-key id="29" parent="4" name="FKjwct7foag4dx0nrmipr5w5prx">
         <columns>client_id</columns>
         <ref-key>~.client.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
+      <column id="30" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="31" parent="5" name="balance">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="32" parent="5" name="experience">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="33" parent="5" name="fullName">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="34" parent="5" name="location">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="35" parent="5" name="phone">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="5" name="status">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="37" parent="5" name="car_fk">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="38" parent="5" name="FKmarpkj0ph1wehwo3v7cp53x40">
+        <columns>car_fk</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="39" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="40" parent="5" name="FKmarpkj0ph1wehwo3v7cp53x40">
+        <columns>car_fk</columns>
+        <ref-key>~.car.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="41" parent="6" name="driver_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="6" name="orders_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="43" parent="6" name="FKi7plfmhx4yydiesakg9pkufo6">
+        <columns>driver_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="44" parent="6" name="UK_44ps1c1ig5j6rnbowpc3ovqcl">
+        <columns>orders_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="45" parent="6" name="UK_44ps1c1ig5j6rnbowpc3ovqcl">
+        <columns>orders_id</columns>
+        <underlying-index>UK_44ps1c1ig5j6rnbowpc3ovqcl</underlying-index>
+      </key>
+      <foreign-key id="46" parent="6" name="FKd0k27m0b5quxxwagy5f616de1">
+        <columns>orders_id</columns>
+        <ref-key>~.orders.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="47" parent="6" name="FKi7plfmhx4yydiesakg9pkufo6">
+        <columns>driver_id</columns>
+        <ref-key>~.driver.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="48" parent="7" name="next_val">
+        <data-type>bigint(20)</data-type>
+      </column>
       <column id="49" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
@@ -226,7 +226,7 @@
         <data-type>int(11)</data-type>
       </column>
       <column id="66" parent="9" name="stateOfOrder">
-        <data-type>int(11)</data-type>
+        <data-type>varchar(255)</data-type>
       </column>
       <column id="67" parent="9" name="ulloaningAddress">
         <data-type>varchar(255)</data-type>
