@@ -28,6 +28,7 @@
           <element id="library" level="project" name="Maven: org.dbunit:dbunit:2.4.9" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,8 +1,8 @@
 package server.service;
 
-import server.bean.ClientB;
 import server.entity.*;
 import server.entity.Enum.StateOfLogin;
+import server.entity.ClientE;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -17,14 +17,14 @@ public class TotalService implements Queries {
     private EntityManager em = Persistence.createEntityManagerFactory("NCEDU").createEntityManager();
 
     @Override
-    public Object getByLogin(String login) {
+    public java.lang.Object getByLogin(String login) {
         TypedQuery<LoginE> query = em.createNamedQuery("Login.GetByLogin", LoginE.class);
         query.setParameter("login", login);
         if (query.getResultList().isEmpty()) {
             return null;
         }
 
-        Object result = query.getSingleResult();
+        java.lang.Object result = query.getSingleResult();
 
         if (query.getSingleResult().getDriverE() == null) {
             TypedQuery<ClientE> query1 = em.createNamedQuery("Client.GetClientById", ClientE.class);

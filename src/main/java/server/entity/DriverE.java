@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * Created by Павел on 30.07.2016.
  */
-@XmlRootElement
 @Entity(name = "driver")
 @Table
 @NamedQueries({

@@ -1,93 +1,107 @@
 package server.ejb;
 
-import org.dbunit.dataset.IDataSet;
-import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
-import org.dbunit.operation.DatabaseOperation;
-import org.hibernate.boot.model.relational.Database;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import server.entity.CarE;
 import server.entity.ClientE;
 import server.entity.DriverE;
-import server.entity.LoginE;
 import server.entity.OrderE;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import java.awt.print.Book;
 import java.io.*;
 
 /**
  * Created by Павел on 30.07.2016.
  */
-public class ParseXMLImpl extends DBUnitConfigForXML implements ParseXML {
+public class ParseXMLImpl extends DBUnitConfigForXML {
 
     public ParseXMLImpl(String name) {
         super(name);
     }
 
-    @Override
-    public File parseDriverXML(DriverE driver) {
-        return null;
-    }
-
-    @Override
-    public File parseClientXML(ClientE client) throws Exception {
-        File of = new File("D:\\book.xml");
-        try (BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(of)))
-        {
-            writer.write(getClientXml(client).getBytes());
-        }
-
-//        try (FileOutputStream os = new FileOutputStream(of)) {
-//
-//            JAXBContext context = JAXBContext.newInstance(XmlClient.class);
-//            Marshaller m = context.createMarshaller();
-//            m.marshal(new XmlClient(client), os);
-//        }
-
-//        IDataSet assertData = tester.getConnection().createDataSet();
-//        IDataSet a1 = new FlatXmlDataSetBuilder().
-//        DatabaseOperation.CLEAN_INSERT.execute();
-        return null;
-    }
-
-    public String getClientXml(ClientE client) {
-        String ls = System.getProperty("line.separator");
-
-        StringBuffer xmlOrders = new StringBuffer("");
-        if (client.getOrders() != null) {
-            for (OrderE order : client.getOrders()) {
-                xmlOrders.append("<order>").append(order.getId()).append("</order>").append(ls);
+    public File parseJson(Object object) throws Exception {
+        File of = new File("C:\\client.xml");
+        try (BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(of))) {
+            if (object instanceof ClientE) {
+                writer.write(getClientJson((ClientE) object).getBytes());
+            } else if (object instanceof OrderE) {
+                writer.write(getOrderJson((OrderE) object).getBytes());
+            } else if (object instanceof DriverE){
+                writer.write(getDriverJson((DriverE) object).getBytes());
+            }else if (object instanceof CarE){
+                writer.write(getCarJson((CarE) object).getBytes());
             }
         }
 
-        String xmlString = new StringBuffer("<client>").append(ls)
-                .append("<fullName>").append(client.getFullName()).append("</fullName>").append(ls)
-                .append("<phone>").append(client.getPhone()).append("</phone>").append(ls)
-                .append("<address>").append(client.getAddress()).append("</address>").append(ls)
-                .append("<login>").append(client.getLogin().getLogin()).append("</login>").append(ls)
-                .append("<orders>").append(xmlOrders).append("</orders>").append(ls)
-                .append("</client>").append(ls)
-                .toString();
-
-        return xmlString;
+        return of;
     }
 
-    public String getOrderXml(OrderE order) {
-        String xmlString = new StringBuffer("<order>")
-                .append("<id>").append(order.getId()).append("</id>")
-                .append("<driver>").append(order.getDriverE().getFullName()).append("</driver>")
-                .append("<client>").append(order.getClientE().getFullName()).append("</client>")
-                .append("<state>").append(order.getOrderInfo().getStateOfOrder()).append("</state>")
-                .append("<loadingAddress>").append(order.getOrderInfo().getLoadingAddress()).append("</loadingAddress>")
-                .append("<unloadingAddress>").append(order.getOrderInfo().getUnloadingAddress()).append("</unloadingAddress>")
-                .append("<cargoParameters>").append(order.getOrderInfo().getCargoParams()).append("</cargoParameters>")
-                .append("<comments>").append(order.getOrderInfo().getComments()).append("</comments>")
-                .append("<cargoLocation>").append(order.getOrderInfo().getCargoLocation()).append("</cargoLocation>")
-                .append("<price>").append(order.getOrderInfo().getPrice()).append("</price>")
-                .append("<date>").append(order.getDateOfAdd()).append("</date>")
-                .append("<number>").append(order.getNumberOfOrder()).append("</number>")
-                .append("</order>")
-                .toString();
+    public String getClientJson(ClientE client) {
+        JSONArray orders = new JSONArray();
+        if (client.getOrders() != null) {
+            for (OrderE o : client.getOrders()) {
+                orders.add(o.getId());
+            }
+        }
+        JSONObject clientJS = new JSONObject();
+        clientJS.put("full name", client.getFullName());
+        clientJS.put("phone", client.getPhone());
+        clientJS.put("address", client.getAddress());
+        clientJS.put("login", client.getLogin().getLogin());
+        clientJS.put("orders", orders);
+        return clientJS.toString();
+    }
 
-        return xmlString;
+    public String getOrderJson(OrderE order) {
+        JSONObject orderJS = new JSONObject();
+        orderJS.put("id", order.getId());
+        orderJS.put("driverName", order.getDriverE().getFullName());
+        orderJS.put("driverId", order.getDriverE().getId());
+        orderJS.put("clinetName", order.getClientE().getFullName());
+        orderJS.put("clinetId", order.getClientE().getId());
+        orderJS.put("state", order.getOrderInfo().getStateOfOrder());
+        orderJS.put("loadingAddress", order.getOrderInfo().getLoadingAddress());
+        orderJS.put("unloadingAddress", order.getOrderInfo().getUnloadingAddress());
+        orderJS.put("cargoParameters", order.getOrderInfo().getCargoParams());
+        orderJS.put("comments", order.getOrderInfo().getComments());
+        orderJS.put("cargoLocation", order.getOrderInfo().getCargoLocation());
+        orderJS.put("price", order.getOrderInfo().getPrice());
+        orderJS.put("date", order.getDateOfAdd());
+        orderJS.put("number", order.getNumberOfOrder());
+        return orderJS.toString();
+    }
+
+    public String getDriverJson(DriverE driver) {
+        JSONObject driverJS = new JSONObject();
+        JSONArray ordersId = new JSONArray();
+        if (driver.getOrders() != null) {
+            for (OrderE o : driver.getOrders()) {
+                ordersId.add(o.getId());
+            }
+        }
+
+        driverJS.put("id", driver.getId());
+        driverJS.put("fullName", driver.getFullName());
+        driverJS.put("phone", driver.getPhone());
+        driverJS.put("experience", driver.getExperience());
+        driverJS.put("status", driver.getStatus());
+        driverJS.put("location", driver.getLocation());
+        driverJS.put("balance", driver.getBalance());
+        driverJS.put("login", driver.getLogin().getLogin());
+        driverJS.put("carId", driver.getCarE().getId());
+        driverJS.put("ordersId", ordersId);
+
+        return driverJS.toString();
+    }
+
+    public String getCarJson(CarE car){
+        JSONObject carJS = new JSONObject();
+
+        carJS.put("id",car.getId());
+        carJS.put("model",car.getModel());
+        carJS.put("age",car.getAge());
+        carJS.put("number",car.getNumber());
+        carJS.put("capacity",car.getCapacity());
+        carJS.put("driverId",car.getDriver().getId());
+        return car.toString();
     }
 }

@@ -14,9 +14,6 @@ import server.entity.Enum.StateOfOrder;
 import server.entity.OrderE;
 import server.entity.OrderInfoE;
 import server.service.OrderService;
-import server.service.TotalService;
-
-import javax.inject.Inject;
 
 /**
  * Created by ����� on 06.08.2016.

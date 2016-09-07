@@ -6,7 +6,6 @@ import server.entity.Enum.StateOfOrder;
 import server.entity.OrderE;
 import server.entity.OrderInfoE;
 import server.service.OrderService;
-import server.service.TotalService;
 
 import javax.ejb.Stateless;
 
@@ -23,12 +22,12 @@ public class OrderEJB {
     }
 
     public void setDriverForOrder(DriverE driver, OrderE order) {
-        //todo make soma proverka
+        //todo make some proverka
         orderService.setDriverForOrder(driver, order);
     }
 
     public void changeStateOfOrder(OrderE orderE, StateOfOrder stateOfOrder) {
-        OrderE order = orderService.getOrderById(orderE);
+        OrderE order = orderService.getOrderById(orderE.getId());
         orderService.changeStateOfOrder(order, stateOfOrder);
     }
 

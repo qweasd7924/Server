@@ -3,9 +3,6 @@ package server.entity;
 import server.entity.Enum.StateOfLogin;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by Павел on 01.08.2016.

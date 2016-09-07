@@ -3,6 +3,7 @@ package server.ejb;
 import server.entity.*;
 import server.entity.Enum.StateOfDriverEnum;
 import server.entity.Enum.StateOfLogin;
+import server.entity.ClientE;
 import server.service.TotalService;
 
 /**
@@ -10,14 +11,14 @@ import server.service.TotalService;
  */
 public class LoginRegImpl implements LoginReg {
     TotalService totalService = new TotalService();
-    Object o;//driver or client
+    java.lang.Object o;//driver or client
 
     public LoginRegImpl() {
     }
 
     @Override
     public void addNewObj(StateOfLogin clOrDriver, String login, String password, String repassword) {
-        Object o = totalService.getByLogin(login);
+        java.lang.Object o = totalService.getByLogin(login);
         // TODO: 02.08.2016 same login check
         if (o == null) {
             if (repassword.equals(password)) {

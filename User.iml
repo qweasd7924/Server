@@ -59,6 +59,6 @@
     <orderEntry type="library" name="Maven: org.dbunit:dbunit:2.4.9" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
   </component>
 </module>
-

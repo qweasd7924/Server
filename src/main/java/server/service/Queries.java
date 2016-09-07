@@ -2,7 +2,6 @@ package server.service;
 
 import server.entity.ClientE;
 import server.entity.DriverE;
-import server.entity.Enum.StateOfLogin;
 import server.entity.OrderE;
 
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
  * Created by Павел on 30.07.2016.
  */
 public interface Queries {
-    public Object getByLogin(String login);
+    public java.lang.Object getByLogin(String login);
 
 
     List<DriverE> getAllDrivers();

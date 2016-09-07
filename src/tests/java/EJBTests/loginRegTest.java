@@ -12,7 +12,6 @@ import server.entity.Enum.StateOfDriverEnum;
 import server.entity.Enum.StateOfLogin;
 import server.service.TotalService;
 
-import javax.persistence.Temporal;
 import java.util.List;
 
 /**

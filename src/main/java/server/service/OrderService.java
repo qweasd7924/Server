@@ -9,7 +9,6 @@ import server.entity.OrderInfoE;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-import java.text.DateFormat;
 import java.util.Date;
 
 /**
@@ -61,9 +60,9 @@ public class OrderService {
         return order;
     }
 
-    public OrderE getOrderById(OrderE orderE) {
+    public OrderE getOrderById(int id) {
         TypedQuery<OrderE> query = em.createNamedQuery("Order.getById", OrderE.class);
-        query.setParameter("id", orderE.getId());
+        query.setParameter("id", id);
         if (query.getResultList().isEmpty()) {
             return null;
         }
